@@ -1,6 +1,6 @@
 <span align="center">
 
-# homebridge-Wallbox
+# homebridge-wallbox
 
 </span>
 
@@ -23,7 +23,6 @@ This is a plugin for [Homebridge](https://homebridge.io/), allowing you to contr
     "autoLock": true,
     "autoLockDelay": 60,
     "debug": true,
-    
 }
 ```
 ### Configuration Parameters:
@@ -40,10 +39,13 @@ This is a plugin for [Homebridge](https://homebridge.io/), allowing you to contr
 - Should work with other Wallbox model but can't certify (can't test ;) ) 
 
 ## Known issues / To Do list
-- [] poll device status in iOS home app (to refresh the status on load)
-- [] GET device model and firmware to populate Homekit accessory
-- [] ADD "change max voltage" Switch
-- [] ADD "Pause/Resume Charge" Switch
+### ToDo next
+- [ ] Update device status in iOS home app (to refresh the status on load)
+- [ ] GET device model and firmware to populate Homekit accessory
+- [ ] ADD "change max voltage" Switch
+- [ ] ADD "Pause/Resume Charge" Switch
+### Warning
+If you enable `autoLock` with the plugin, please **DISABLE** the "offical" autolock function from Wallbox (in the App). There is no "status" polling and you may desynchronize your homekit accessory.
 
 ## Acknowledgment
 - Plugin based on [homebridge-http-lock-ultimate](https://github.com/TheRealSimonMlr/homebridge-http-lock-ultimate)

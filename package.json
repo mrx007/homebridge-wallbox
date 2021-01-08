@@ -1,8 +1,8 @@
 {
-  "private": true,
-  "name": "homebridge-wallbox-charger",
+  "private": false,
+  "name": "homebridge-wallbox",
   "displayName": "Homebridge Wallbox",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "This homebridge plugin your wallbox EV charger to to Apple's HomeKit (as a locking device). Using the Wallbox API and your user account Token",
   "main": "index.js",
   "engines": {
@@ -15,7 +15,7 @@
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "git:mrx007/homebridge-Wallbox-EVcharger"
+    "url": "git:mrx007/homebridge-wallbox"
   },
   "keywords": [
     "homebridge-plugin",
@@ -25,7 +25,8 @@
   "author": "Aymeric Proux",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mrx007/homebridge-Wallbox-EVcharger/issues"
+    "url": "https://github.com/mrx007/homebridge-wallbox/issues"
   },
-  "homepage": "https://github.com/mrx007/homebridge-Wallbox-EVcharger#readme"
+  "homepage": "https://github.com/mrx007/homebridge-wallbox#readme",
+  "devDependencies": {}
 }
