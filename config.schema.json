@@ -1,0 +1,68 @@
+{
+  "pluginAlias": "homebridge-wallbox-charger",
+  "pluginType": "accessory",
+  "singular": false,
+  "headerDisplay": "This Plugin work with **[Wallbox EV Charger](https://wallbox.com)**.",
+  "schema": {
+    "title": "Wallbox",
+    "type": "object",
+    "properties": {
+      "name": {
+        "title": "Name",
+        "type": "string",
+        "required": true,
+        "default": "My Wallbox",
+        "description": "The Name of your Wallbox in Apple Home app"
+      },
+      "serial": {
+        "title": "Wallbox Serial Number",
+        "type": "number",
+        "required": true,
+        "placeholder": 123456,
+        "description": "Your Wallbox serial number (you'll find it in the Wallbox offical App or on the box itself)"
+      },
+      "token": {
+        "title": "Token",
+        "type": "string",
+        "required": true,
+        "description": "To get a Token, open Terminal and type the following command : curl -u YOUR_WALLBOX_ACCOUNT_EMAIL https://api.wall-box.com/auth/token/user "
+      },
+      "autoLock": {
+        "title": "Autolock",
+        "type": "boolean",
+        "description": "NOTE : if you use this feature, please DISABLE the wallbox_autolock_function in the Wallbox app"
+      },
+      "autoLockDelay": {
+        "title": "Autolock Delay",
+        "type": "integer",
+        "default": 60,
+        "description": "Delay in Seconds (default = 60)",
+        "condition": {
+            "functionBody": "return model.autoLock === true;"
+        }
+      },
+      "debug": {
+        "title": "Debug",
+        "type": "boolean",
+        "description": "Detailed logs in Hombridge"
+      }
+    }
+  },
+  "layout": [
+    
+          "name",
+          "serial",
+          "token",
+    {
+        "type": "section",
+        "title": "Advanced Features",
+        "expanded": false,
+        "expandable": true,
+        "items": [
+          "autoLock",
+          "autoLockDelay",
+          "debug"
+        ]
+      }
+  ]
+}
