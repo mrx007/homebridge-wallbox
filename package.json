@@ -1,5 +1,7 @@
 {
+  "private": true,
   "name": "homebridge-wallbox-charger",
+  "displayName": "Homebridge Wallbox",
   "version": "0.0.2",
   "description": "This homebridge plugin your wallbox EV charger to to Apple's HomeKit (as a locking device). Using the Wallbox API and your user account Token",
   "main": "index.js",

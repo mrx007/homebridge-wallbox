@@ -1,5 +1,5 @@
 {
-  "pluginAlias": "homebridge-wallbox-charger",
+  "pluginAlias": "WallboxCharger",
   "pluginType": "accessory",
   "singular": false,
   "headerDisplay": "This Plugin work with **[Wallbox EV Charger](https://wallbox.com)**.",

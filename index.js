@@ -5,7 +5,7 @@ const packageJson = require('./package.json')
 module.exports = function (homebridge) {
   Service = homebridge.hap.Service
   Characteristic = homebridge.hap.Characteristic
-  homebridge.registerAccessory('homebridge-wallbox-charger', /*'WallboxEVCharger' ,*/ WallboxEVCharger)
+  homebridge.registerAccessory('homebridge-wallbox-charger', 'WallboxCharger' , WallboxEVCharger)
 }
 
 function WallboxEVCharger (log, config) {
